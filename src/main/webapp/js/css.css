@@ -1,0 +1,34 @@
+form#registro{
+    margin:auto;
+    background: lightskyblue;
+    color: white;
+    font-size: 12px;
+    padding: 30px;
+    width: 500px;
+    border:solid 10px LightSteelBlue;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.campos{
+    font-family:verdana,arial;
+    width: 500px;
+    font-size:8pt;
+    color:black;
+    border: 1px dotted red;
+    background-color:white;
+}
+.boton{
+    font-size:12px;
+    font-family:Verdana,Helvetica;
+    font-weight:bold;
+    color:#0000FF;
+    background:#A4C1FF;
+    border:0px;
+    width:120px;
+    height:25px;
+}
+
+#submit{
+    margin: -25px 0px 0px 380px;
+}
