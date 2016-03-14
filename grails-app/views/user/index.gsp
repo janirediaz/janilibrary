@@ -7,6 +7,7 @@
 </head>
 
 <body>
+${flash.error}
 <h3>Formulario de Registro</h3>
 
 <form name="form" id="registro" method="get" action="http://localhost:8080/user/saveUser"  onsubmit="return validacion()">

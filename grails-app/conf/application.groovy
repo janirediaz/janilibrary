@@ -45,8 +45,8 @@ environments {
 			mail {
 				host = "smtp.live.com"
 				port = 587
-				username = ""
-				password = ""
+				username = "lauragomez831@hotmail.com"
+				password = "Mingui11"
 				props = ["mail.smtp.starttls.enable":"true",
 						 "mail.smtp.port":"587"]
 

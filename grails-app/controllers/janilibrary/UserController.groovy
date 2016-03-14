@@ -32,12 +32,16 @@ class UserController {
 
         mailService.sendMail {
             to "janire.diaz@gmail.com"
-            subject "Hello"
-            text "How are you?"
+            subject "Confirmation"
+            text "Click in this link to finish your registration:"
         }
 
         render(view: "index")
 
+        flash.error = "token invalido"
+
 
     }
+
+
 }
