@@ -36,12 +36,22 @@ class UserController {
             text "Click in this link to finish your registration:"
         }
 
-        render(view: "index")
+    }
 
-        flash.error = "token invalido"
+
+    def confirmToken(){
+        def user = User.findBytokenConfirmation(params.tokenConfirmation);
+        if(User != null){
+            boolean enabled = true;
+
+        }else{
+            flash.error = "token invalido"
+            redirect(controller: 'user', action:'saveUser');
+        }
 
 
     }
+
 
 
 }
