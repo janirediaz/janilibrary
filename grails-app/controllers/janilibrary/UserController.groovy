@@ -29,7 +29,6 @@ class UserController {
         println role.authority;
         UserRole.create(user, role, true);
 
-
         mailService.sendMail {
             to "janire.diaz@gmail.com"
             subject "Confirmation"
@@ -48,7 +47,6 @@ class UserController {
             flash.error = "token invalido"
             redirect(controller: 'user', action:'saveUser');
         }
-
 
     }
 

@@ -47,7 +47,7 @@ environments {
 				port = 587
 				username = "lauragomez831@hotmail.com"
 				password = "Mingui11"
-				props = ["mail.smtp.starttls.enable":"true",
+				props = ["mail.smtp.starttls.enable":"false",
 						 "mail.smtp.port":"587"]
 
 			}
