@@ -32,7 +32,7 @@ class UserController {
         mailService.sendMail {
             to "janire.diaz@gmail.com"
             subject "Confirmation"
-            text "Click in this link to finish your registration:"
+            text ""
         }
 
     }
@@ -41,7 +41,10 @@ class UserController {
     def confirmToken(){
         def user = User.findBytokenConfirmation(params.tokenConfirmation);
         if(User != null){
-            boolean enabled = true;
+            user.enabled = true;
+            if(!user.save()){
+                println user.errors.allErrors.join('\n');
+            }
 
         }else{
             flash.error = "token invalido"
