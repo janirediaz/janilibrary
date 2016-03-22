@@ -32,19 +32,21 @@ class UserController {
         mailService.sendMail {
             to "janire.diaz@gmail.com"
             subject "Confirmation"
-            text ""
+            text "http://localhost:8080/user/confirmToken?tokenConfirmation=" + user.tokenConfirmation
         }
 
     }
 
 
     def confirmToken(){
-        def user = User.findBytokenConfirmation(params.tokenConfirmation);
+        def user = User.findByTokenConfirmation(params.tokenConfirmation);
         if(User != null){
             user.enabled = true;
             if(!user.save()){
                 println user.errors.allErrors.join('\n');
             }
+            println user.tokenConfirmation
+            render(view: "registration");
 
         }else{
             flash.error = "token invalido"

@@ -10,7 +10,7 @@
 ${flash.error}
 <h3>Formulario de Registro</h3>
 
-<form name="form" id="registro" method="get" action="http://localhost:8080/user/saveUser"  onsubmit="return validacion()">
+<form name="form" id="registro" method="get" action="http://localhost:8080/user/saveUser">
     <div class="form-group">
         <label class="control-label" for="nombre"></label>
     Usuario:<br><input  type="text" class="form-control" name="username" id="nombre" placeholder="Escribe tu nombre completo"></br>
